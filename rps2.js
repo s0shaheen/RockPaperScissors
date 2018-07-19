@@ -95,21 +95,22 @@ const handlers = {
   'LaunchRequest': function () {
     // On skill launch, ask user what move s/he wants to make
     // .listen() -- reprompt user
-    let welcomeDialog;
+    // let welcomeDialog;
 
     // // Randomly decided if Alexa plays RPS or refuses
-    if (!random(ALEXA_PLAYS)) {
-    welcomeDialog = random(DIALOG_REFUSE);
-    }
+    // if (!random(ALEXA_PLAYS)) {
+    // welcomeDialog = random(DIALOG_REFUSE);
+    // }
 
     // // Good luck
-    else {
-    welcomeDialog = random(DIALOG_MOVE_PROMPT);
-    }
+    // else {
+    // welcomeDialog = random(DIALOG_MOVE_PROMPT);
+    // }
+    
+    // this.response.speak(welcomeDialog).listen(HELP_REPROMPT);
+    // this.emit(':responseReady');
 
-    this.response.speak(welcomeDialog).listen(HELP_REPROMPT);
-    this.emit(':responseReady');
-
+    
     readDynamoItem(params, myResult=>{
             var say = '';
 
